@@ -1,0 +1,173 @@
+\documentclass[a4paper, 12pt]{article}
+
+% -----------------------------------------------------------------------------
+%
+%       Ataskaitos šablonas
+%
+%       Redagavo: Domantas Petrauskas domantas.pet@gmail.com
+%       Autorius: Tomas Rekašius      tomas.rekasius@vgtu.lt
+%
+%       Sukurta: 2013-12-27
+%       Versija: 1.0.0
+%
+% -----------------------------------------------------------------------------
+
+
+% -----------------------------------------------------------------------------
+%  PREAMBULĖ
+% -----------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % naudojama, kai .tex failas UTF-8 koduotės
+\usepackage[L7x]{fontenc} % nurodoma lietuviško teksto koduotė Latin-7
+\usepackage[lithuanian]{babel}  % nurodoma, kad dokumentas yra lietuviškas
+
+\usepackage{lmodern}  % dokumente naudojamas šriftas Latin Modern
+\usepackage{microtype}  % optimizuojami atstumai tarp raidžių žodyje
+\usepackage{indentfirst}  % atitraukiama pirmoji naujo skyriaus eilutė
+\usepackage{icomma} % po kablelio skaičiaus viduryje nebus tarpo
+\usepackage{amsmath, amssymb, amsthm} % matematiniai simboliai ir konstrukcijos
+\usepackage{graphicx} % grafinių failų įterpimas ir kiti nustatymai
+\usepackage{svg}  % vektorinės grafikos failų palaikymas
+\usepackage{xcolor} % naudojamas teksto spalvoms reguliuoti
+\usepackage{booktabs} % reikalingas tvarkingoms lentelėms sudaryti
+\usepackage{multirow} % paketas kelių eilučių apjungimui lentelėse
+\usepackage{array}  % paketas papildomiems lentelių nustatymams
+\usepackage{listings} % programinio kodo įterpimas ir formatavimas
+\usepackage{lipsum} % Lorem Ipsum teksto generatorius
+\usepackage[numbered]{matlab-prettifier}  % matlab kodo stilius
+\usepackage{caption}  % paveiksliukų ir lentelių užrašų formavimas
+\usepackage{geometry} % paraščių ir kitų lapo parametrų nustatymai
+\usepackage{hyperref} % interaktyvioms nuorodoms dokumente sukurti
+\usepackage{multicol} % paketas stulpeliams formuoti
+
+\geometry{  % paketo geometry parametrų nustatymai
+    left = 2.5cm,
+    right = 1.5cm,
+    top = 2.0cm,
+    bottom = 2.0cm
+}
+
+\captionsetup{  % paketo caption parametrų nustatymai
+    format = hang,
+    labelfont = bf,
+    font = small,
+    tablename = lentelė,
+    figurename = pav,
+    labelsep = period
+}
+
+\hypersetup{  % paketo hyperref parametrų nustatymai
+    unicode = true,
+    linktocpage = false,
+    colorlinks = true,
+    linkcolor = red, % spausdinant pakeisti į black
+    citecolor = blue
+}
+
+\lstset{  % paketo listings/matlab-prettifier parametrų nustatymai
+  style              = Matlab-editor, % pakeisti į Matlab-bw spausdinant nespalvotai
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+  firstnumber=last
+}
+
+% ------------- PAPILDOMI PAKETAI IR NUSTATYMAI -------------
+
+\lstMakeShortInline[style=Matlab-editor]"   % simbolis inline matlab kodo įterpimui
+\linespread{1.3}    % nustatomas 1,5 tarpas tarp eilučių
+
+
+% -----------------------------------------------------------------------------
+%  DOKUMENTO PRADŽIA
+% -----------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------- VIRŠELIS -------------
+
+\begin{titlepage}
+
+    \centering
+
+    \begin{figure}
+        % \includegraphics[height=2cm]{vgtu_logo_lt}  % Lietuviškas VGTU logotipas
+        \includesvg[height=2cm]{vgtu_logo_en} % Angliškas VGTU logotipas
+        \centering
+    \end{figure}
+
+    \textsc{\Large Vilniaus Gedimino Technikos Universitetas}\\[.5\baselineskip] % Universiteto pavadinimas
+    \textsc{\large X fakultetas}\\[.5\baselineskip] % Fakulteto pavadinimas
+    \textsc{\large Y katedra}\\[.5\baselineskip] % Katedros pavadinimas
+
+    \vspace{\fill}
+
+    {\Large\bfseries Y darbas Nr. X}\\[1.0\baselineskip] % Darbo pavadinimas
+    {\Large Ataskaita}
+
+    \vspace{\fill}
+
+    \begin{flushright}
+        \begin{tabular}{rl}
+            Atliko:       & stud. Vardas Pavardė\\
+            Tikrino:      & prof. Vardas Pavardė\\[1cm]
+            Įvertinimas: & \dotfill{}\\
+            & \multicolumn{1}{c}{\large\textsuperscript{(pažymys, dėstytojo parašas)}}
+        \end{tabular}
+    \end{flushright}
+
+    \vspace{\fill}
+
+    Vilnius, \the\year{}
+
+\end{titlepage}
+
+% ------------- TURINYS -------------
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+% ------------- UŽDUOTIS -------------
+
+\section{Užduoties analizė}
+\subsection{Darbo tikslas}
+\lipsum[1]
+
+\subsection{Darbo priemonės}
+\lipsum[2]
+
+\subsection{Užduotis}
+\lipsum[3]
+
+% ------------- DARBO EIGA -------------
+
+\section{Darbo eiga}
+\lipsum[4]
+
+% ------------- REZULTATAI -------------
+
+\section{Rezultatai}
+\lipsum[5]
+
+% ------------- IŠVADOS -------------
+
+\section{Išvados}
+\lipsum[6]
+
+% ------------- LITERATŪROS SĄRAŠAS -------------
+
+\newpage
+
+\bibliography{}
+
+\phantomsection{}
+\addcontentsline{toc}{section}{Literatūros sąrašas}  % Bibliografija į turinį automatiškai neįtraukiama.
+
+\begin{thebibliography}{99}
+\bibitem{pavarde} Vardas Pavarde. Pavadinimas. Miestas: Leidykla, Metai. Puslapių skaičius., ISBN xxxx-xx-xxx-x.
+\end{thebibliography}
+
+\end{document}
