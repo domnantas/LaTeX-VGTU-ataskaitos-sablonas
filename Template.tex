@@ -4,11 +4,13 @@
 %
 %       Ataskaitos šablonas
 %
-%       Redagavo: Domantas Petrauskas domantas.pet@gmail.com
 %       Autorius: Tomas Rekašius      tomas.rekasius@vgtu.lt
+%       Redagavo: Domantas Petrauskas domantas.pet@gmail.com
 %
 %       Sukurta: 2013-12-27
-%       Versija: 1.0.0
+%
+%       Paskutinis pakeitimas: 2017-04-10
+%       Versija: 1.0.1
 %
 % -----------------------------------------------------------------------------
 
@@ -17,37 +19,37 @@
 %  PREAMBULĖ
 % -----------------------------------------------------------------------------
 
-\usepackage[utf8]{inputenc} % naudojama, kai .tex failas UTF-8 koduotės
-\usepackage[L7x]{fontenc} % nurodoma lietuviško teksto koduotė Latin-7
-\usepackage[lithuanian]{babel}  % nurodoma, kad dokumentas yra lietuviškas
+\usepackage[utf8]{inputenc} % Naudojama, kai .tex failas UTF-8 koduotės
+\usepackage[L7x]{fontenc} % Nurodoma lietuviško teksto koduotė Latin-7
+\usepackage[lithuanian]{babel}  % Nurodoma, kad dokumentas yra lietuviškas
 
-\usepackage{lmodern}  % dokumente naudojamas šriftas Latin Modern
-\usepackage{microtype}  % optimizuojami atstumai tarp raidžių žodyje
-\usepackage{indentfirst}  % atitraukiama pirmoji naujo skyriaus eilutė
-\usepackage{icomma} % po kablelio skaičiaus viduryje nebus tarpo
-\usepackage{amsmath, amssymb, amsthm} % matematiniai simboliai ir konstrukcijos
-\usepackage{graphicx} % grafinių failų įterpimas ir kiti nustatymai
-\usepackage{svg}  % vektorinės grafikos failų palaikymas
-\usepackage{xcolor} % naudojamas teksto spalvoms reguliuoti
-\usepackage{booktabs} % reikalingas tvarkingoms lentelėms sudaryti
-\usepackage{multirow} % paketas kelių eilučių apjungimui lentelėse
-\usepackage{array}  % paketas papildomiems lentelių nustatymams
-\usepackage{listings} % programinio kodo įterpimas ir formatavimas
-\usepackage{lipsum} % Lorem Ipsum teksto generatorius
-\usepackage[numbered]{matlab-prettifier}  % matlab kodo stilius
-\usepackage{caption}  % paveiksliukų ir lentelių užrašų formavimas
-\usepackage{geometry} % paraščių ir kitų lapo parametrų nustatymai
-\usepackage{hyperref} % interaktyvioms nuorodoms dokumente sukurti
-\usepackage{multicol} % paketas stulpeliams formuoti
+\usepackage{lmodern}  % Dokumente naudojamas šriftas Latin Modern
+\usepackage{microtype}  % Optimizuojami atstumai tarp raidžių žodyje
+\usepackage{indentfirst}  % Atitraukiama pirmoji naujo skyriaus eilutė
+\usepackage{icomma} % Po kablelio skaičiaus viduryje nebus tarpo
+\usepackage{amsmath, amssymb, amsthm} % Matematiniai simboliai ir konstrukcijos
+\usepackage{mathtools} % Matematikos įrankiai
+\usepackage{graphicx} % Grafinių failų įterpimas ir kiti nustatymai
+\usepackage{svg}  % Vektorinės grafikos failų palaikymas
+\usepackage{xcolor} % Naudojamas teksto spalvoms reguliuoti
+\usepackage{booktabs} % Reikalingas tvarkingoms lentelėms sudaryti
+\usepackage{multirow} % Kelių eilučių apjungimas lentelėse
+\usepackage{array}  % Papildomi lentelių nustatymai
+\usepackage{listings} % Programinio kodo įterpimas ir formatavimas
+\usepackage{caption}  % Paveiksliukų ir lentelių užrašų formavimas
+\usepackage{geometry} % Paraščių ir kitų lapo parametrų nustatymai
+\usepackage{hyperref} % Nuorodų kūrimas dokumente
+\usepackage{multicol} % Stulpelių formavimas
+\usepackage{siunitx} % SI vienetų formatavimas
 
-\geometry{  % paketo geometry parametrų nustatymai
+\geometry{  % paketo geometry parametrų nustatymai (paraštės)
     left = 2.5cm,
     right = 1.5cm,
     top = 2.0cm,
     bottom = 2.0cm
 }
 
-\captionsetup{  % paketo caption parametrų nustatymai
+\captionsetup{  % paketo caption parametrų nustatymai (antraštės)
     format = hang,
     labelfont = bf,
     font = small,
@@ -56,7 +58,7 @@
     labelsep = period
 }
 
-\hypersetup{  % paketo hyperref parametrų nustatymai
+\hypersetup{  % paketo hyperref parametrų nustatymai (nuorodos)
     unicode = true,
     linktocpage = false,
     colorlinks = true,
@@ -64,6 +66,7 @@
     citecolor = blue
 }
 
+\iffalse{} % naudojant matlab-prettifier ištrinti \iffalse{} ir \fi
 \lstset{  % paketo listings/matlab-prettifier parametrų nustatymai
   style              = Matlab-editor, % pakeisti į Matlab-bw spausdinant nespalvotai
   basicstyle         = \mlttfamily,
@@ -71,8 +74,15 @@
   mlshowsectionrules = true,
   firstnumber=last
 }
+\fi
 
 % ------------- PAPILDOMI PAKETAI IR NUSTATYMAI -------------
+
+\usepackage{lipsum} % Lorem Ipsum teksto generatorius
+%\usepackage[numbered]{matlab-prettifier}  % Matlab kodo stilius
+%\usepackage{tikz} % Brėžinių kūrimas
+%\usetikzlibrary{quotes,angles} % Kampų žymėjimas brėžiniuose
+%\usepackage{stanli} % Teorinės mechanikos žymėjimai
 
 \lstMakeShortInline[style=Matlab-editor]"   % simbolis inline matlab kodo įterpimui
 \linespread{1.3}    % nustatomas 1,5 tarpas tarp eilučių
