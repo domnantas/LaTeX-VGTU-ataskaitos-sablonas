@@ -9,8 +9,8 @@
 %
 %       Sukurta: 2013-12-27
 %
-%       Paskutinis pakeitimas: 2017-04-10
-%       Versija: 1.0.1
+%       Paskutinis pakeitimas: 2017-04-14
+%       Versija: 1.0.2
 %
 % -----------------------------------------------------------------------------
 
@@ -41,6 +41,14 @@
 \usepackage{hyperref} % Nuorodų kūrimas dokumente
 \usepackage{multicol} % Stulpelių formavimas
 \usepackage{siunitx} % SI vienetų formatavimas
+
+% ------------- PAPILDOMI PAKETAI -------------
+
+\usepackage{lipsum} % Lorem Ipsum teksto generatorius
+%\usepackage[numbered]{matlab-prettifier}  % Matlab kodo stilius
+%\usepackage{tikz} % Brėžinių kūrimas
+%\usetikzlibrary{quotes,angles} % Kampų žymėjimas brėžiniuose
+%\usepackage{stanli} % Teorinės mechanikos žymėjimai
 
 \geometry{  % paketo geometry parametrų nustatymai (paraštės)
     left = 2.5cm,
@@ -76,17 +84,10 @@
 }
 \fi
 
-% ------------- PAPILDOMI PAKETAI IR NUSTATYMAI -------------
-
-\usepackage{lipsum} % Lorem Ipsum teksto generatorius
-%\usepackage[numbered]{matlab-prettifier}  % Matlab kodo stilius
-%\usepackage{tikz} % Brėžinių kūrimas
-%\usetikzlibrary{quotes,angles} % Kampų žymėjimas brėžiniuose
-%\usepackage{stanli} % Teorinės mechanikos žymėjimai
+% ------------- PAPILDOMI NUSTATYMAI -------------
 
 \lstMakeShortInline[style=Matlab-editor]"   % simbolis inline matlab kodo įterpimui
 \linespread{1.3}    % nustatomas 1,5 tarpas tarp eilučių
-
 
 % -----------------------------------------------------------------------------
 %  DOKUMENTO PRADŽIA
