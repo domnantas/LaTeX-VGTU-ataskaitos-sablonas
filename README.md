@@ -23,3 +23,5 @@
 5. Preambulėje esančių paketų ir nustatymų dažniausiai keisti neprireikia, tačiau paketų sąrašą visad galima praplėsti, atkomentuoti/užkomentuoti esančius paketus ir nustatymus. LaTeX komentarai žymimi `%` ženklu.
 
 6. Savaitę rašykite rašto darbą, įdėkite kelis kart daugiau pastangų negu šiaip reikia, pristatykite darbą dėstytojui, kuris jį pavartys kelias sekundes ir, kaip ir visiems, parašys 10, bet šiaip neįvertins jūsų pastangų, nes dėstytojai šiaip irgi žmonės, pavargę ir už absurdišką algą besiaukojantys žmonės. Prižadėkite sau kad daugiau neberašysite darbų LaTeX nes neverta. Vis tiek rašykite. Rinse and repeat.
+
+UPDATE 2020: Po pirmo kurso nebeprireikė LaTeX. Trečiame kurse spalvinom žemėlapius pieštukais, ketvirtame piešiam lėktuvėlius su Inkscape. Su nekantrumu laukiu penkto kurso, pietų miego ir pieniškos sriubos. Skamba ciniškai, bet nesigailiu studijų - kursiokai puikūs, dėstytojai įdomūs, išmokau nuoširdumo. Gyvenimas gražus.
